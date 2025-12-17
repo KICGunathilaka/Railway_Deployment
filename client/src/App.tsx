@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 // Configure API base URL for Production vs Development
 // In Dev, Vite proxies /api to localhost:8080

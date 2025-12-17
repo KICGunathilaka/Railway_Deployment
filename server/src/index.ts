@@ -163,8 +163,12 @@ if (serveStatic) {
   });
 }
 
-initDB().finally(() => {
+async function startServer() {
+  await initDB();
+  
   app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
   });
-});
+}
+
+startServer();
