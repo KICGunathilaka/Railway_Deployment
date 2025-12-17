@@ -19,6 +19,11 @@ const PORT = (() => {
     throw new Error("PORT not set");
 })();
 app.use(express_1.default.json());
+// Request logger to debug routes
+app.use((req, res, next) => {
+    console.log(`[${new Date().toISOString()}] ${req.method} ${req.path}`);
+    next();
+});
 const corsOrigin = process.env.CORS_ORIGIN;
 if (corsOrigin) {
     app.use((0, cors_1.default)({ origin: corsOrigin }));
