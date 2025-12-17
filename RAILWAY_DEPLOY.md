@@ -8,6 +8,7 @@ Deploy either as two services (recommended) or as a single service.
 
 **Prepare Repository**
 - Ensure root has `package.json`, `server/`, `client/`, and `vite.config.ts`.
+- Ensure `Procfile` exists (content: `web: npm start`) to force Node.js execution.
 - Push to GitHub/GitLab. Do not commit `.env`.
 
 **Add Postgres**
